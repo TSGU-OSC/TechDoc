@@ -42,15 +42,27 @@
 
 🚀学习开源基础知识是参与开源项目的关键。以下是一些学习资源推荐：
 
-* [Linux/Unix常用命令](./Linux_command.md)
+* [常用Windows终端命令](./Windows_Command.md)
 
-* [常用Windows终端命令](./Windows_command.md)
+* [Mac新手用户指南](./Mac_Freshman_Guide.md)
 
-* [Git](./git_command.md)
+* [Linux/Unix常用命令](./Linux_Command.md)
 
-* [docker命令](./docker_command.md)
+* [Git](./Git_Command.md)
 
 * [Markdown](./Markdown.md)
+
+* [Python](./Python.md)
+
+* [VMware安装指南](./VMware_Install.md)
+
+* [Ubunt使用指南](./Ubuntu_Use.md)
+
+* [docker命令](./Docker_Command.md)
+
+* [tumx终端复用器](./tmux.md)
+
+* [网络流量控制](./Net_Traffic_Control.md)
 
 * [Open Source Guides](https://opensource.guide/)：由 GitHub 提供的一系列开源指南，涵盖了开源项目的各个方面。
 * [How to Contribute to Open Source](https://opensource.guide/how-to-contribute/)：一篇详细介绍如何参与开源项目的指南。

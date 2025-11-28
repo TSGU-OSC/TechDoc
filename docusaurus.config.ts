@@ -29,7 +29,7 @@ const config: Config = {
 
   // 关闭文档相关检查1
   onBrokenLinks: 'ignore',
-  onBrokenMarkdownLinks: 'ignore',
+  // onBrokenMarkdownLinks: 'ignore',
   onBrokenAnchors: 'ignore',
   onDuplicateRoutes: 'ignore',
 
@@ -87,8 +87,14 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    // image: 'img/docusaurus-social-card.jpg',
+    // 替换为您的专属社交卡片
+    // 格式：image: 'img/docusaurus-social-card.jpg',
+
+    tableOfContents: {
+      minHeadingLevel: 3,
+      maxHeadingLevel: 3
+    },
+
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -101,7 +107,7 @@ const config: Config = {
       items: [
         {
           type: 'doc',
-          docId: 'Basic-Knowledge/Overview',
+          docId: 'Basic-Knowledge/1Overview',
           position: 'left',
           label: '基础知识',
         },

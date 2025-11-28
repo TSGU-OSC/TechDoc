@@ -362,7 +362,7 @@ repr: meta_schedule.JSONDatabase(0x600001070ea8)
 
     - 用于生产环境时，建议保存调优结果以免重复训练。
 
-7. [tvm.build(input, target="llvm", name=None)]()
+7. tvm.build(input, target="llvm", name=None)
 
     **作用**
 
@@ -391,7 +391,7 @@ repr: meta_schedule.JSONDatabase(0x600001070ea8)
 
     - 构建完成的模块可以序列化保存，复用。
 
-8. [best_tuning_record.as_measure_candidate()]()
+8. best_tuning_record.as_measure_candidate()
 
     **作用**
 
@@ -407,7 +407,7 @@ repr: meta_schedule.JSONDatabase(0x600001070ea8)
 
 
 ### 3.执行与测试 (tvm.runtime)
-9. [tvm.device(target, dev_id=0)]()
+1. tvm.device(target, dev_id=0)
 
     **作用**
 

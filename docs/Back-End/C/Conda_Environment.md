@@ -1,7 +1,7 @@
-# python指定版本安装及Conda环境配置（Ubuntu、MacOS）
+# Python指定版本安装及Conda环境配置（Ubuntu、MacOS）
 
-## 安装python
-python许多新的版本不在默认apt源仓库中 因此我们需要增加仓库
+## 安装Python
+Python许多新的版本不在默认apt源仓库中 因此我们需要增加仓库
 ```bash
 sudo add-apt-repository ppa:deadsnakes/ppa
 ```
@@ -17,7 +17,7 @@ sudo add-apt-repository ppa:deadsnakes/ppa
 apt install python3.8
 ```
 
-如果觉得输入每次使用都要输入python3.8不太方便 可以使用别名功能，在`~/.bashrc`文件中添加
+如果觉得输入每次使用都要输入Python3.8不太方便 可以使用别名功能，在`~/.bashrc`文件中添加
 
 ```bash
 vim ~/.bashrc
@@ -46,7 +46,7 @@ source ~/.bashrc
 命令行最前端出现base标识，说明已激活conda环境
 ![Alt text](../../../static/img/Back-end/C++/Conda_Environment/image-3.png)
 
-创建你所需要的虚拟环境,可指定python版本及你所需要的各种包
+创建你所需要的虚拟环境,可指定Python版本及你所需要的各种包
 ```
 conda create -n <my_env> python=3.8 numpy pandas
 ```
@@ -63,7 +63,7 @@ conda activate audio_enhance
 此时命令行前端现实的环境名称也会改变
 ![Alt text](../../../static/img/Back-end/C++/Conda_Environment/image-5.png)
 
-可以验证下python版本 以及指定的各种包
+可以验证下Python版本 以及指定的各种包
 ```
 python --version
 pip list
