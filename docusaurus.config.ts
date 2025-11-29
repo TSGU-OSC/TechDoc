@@ -5,6 +5,20 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 // 这段代码在Node.js中运行 - 不要在此处使用客户端代码（如浏览器API、JSX等）
 
+// 多平台部署
+const getBaseUrl = () => {
+  // Vercel 自动化部署
+  if(process.env.VERCEL) {
+    return 'https://osc.technicalDocs.cn';
+  }
+  // 自有存储服务器部署
+  if(process.env.NODE_ENV === 'production') {
+    return 'http://172.19.15.18:3000'
+  }
+  // 默认部署
+  return 'http://localhost:3000'
+}
+
 const config: Config = {
   title: '技术文档',
   tagline: '',
@@ -20,7 +34,7 @@ const config: Config = {
 
   // Set the production url of your site here
   // 在这里设置站点的生产url。
-  url: 'https://your-docusaurus-site.example.com',
+  url: getBaseUrl(),
 
   // Set the /<baseUrl>/ pathname under which your site is served
   // 设置你的站点所在的/<baseUrl>/路径名。
