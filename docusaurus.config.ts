@@ -7,9 +7,13 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 // 多平台部署
 const getBaseUrl = () => {
-  // Vercel 自动化部署
-  if(process.env.VERCEL) {
+  // Vercel 生产环境
+  if(process.env.VERCEL_ENV === 'production') {
     return 'https://tech-docusaurus.vercel.app';
+  }
+  // Vercel 预览环境
+  if(process.env.VERCEL) {
+    return `https://${process.env.VERCEL_URL}`;
   }
   // 自有存储服务器部署
   if(process.env.NODE_ENV === 'production') {
