@@ -8,7 +8,7 @@
 
    > 选择启用uniCloud，使用阿里云 , Vue2，默认模版
 
-   ![img1](../../static/img/Operation-and-Maintenance/uploaded-to-cloud-by-HBuilder/image1.png)
+	![img1](../../static/img/Operation-and-Maintenance/Uploaded-to-Cloud-by-HBuilder/image1.png)
 
 2. 初始化uniCLoud
 
@@ -18,7 +18,7 @@
 
    - 创建一个服务空间，创建完成后回到向导刷新列表，选择这个服务空间（创建服务空间可能需要几十秒的时间，可以在web控制台查看是否创建完成。）
 
-     ![img2](../../static/img/Operation-and-Maintenance/uploaded-to-cloud-by-HBuilder/image2.png)
+	![img2](../../static/img/Operation-and-Maintenance/Uploaded-to-Cloud-by-HBuilder/image2.png)
 
 ## 云函数
 
@@ -26,27 +26,27 @@
 
 1. 在uniCloud 的 web [控制台](https://unicloud.dcloud.net.cn/pages/overview/overview?pageid=mp-5afee29d-4894-4d80-9900-b8a8fa9f9223)选择你创建好的服务空间
 
-   ![img3](../../static/img/Operation-and-Maintenance/uploaded-to-cloud-by-HBuilder/image3.png)
+    ![img3](../../static/img/Operation-and-Maintenance/Uploaded-to-Cloud-by-HBuilder/image3.png)
 
 2. 点击名称（如图为 uncommon）进入
 
 3. 在云数据库中新建数据表
 
-   ![img4](../../static/img/Operation-and-Maintenance/uploaded-to-cloud-by-HBuilder/image4.png)
+    ![img4](../../static/img/Operation-and-Maintenance/Uploaded-to-Cloud-by-HBuilder/image4.png)
 
    直接创建空表
 
-   ![img5](../../static/img/Operation-and-Maintenance/uploaded-to-cloud-by-HBuilder/image5.png)
+    ![img5](../../static/img/Operation-and-Maintenance/Uploaded-to-Cloud-by-HBuilder/image5.png)
 
 4. 在项目的*uniCloud.cloudfunction*目录下右键新建云函数
 
-   ![img6](../../static/img/Operation-and-Maintenance/uploaded-to-cloud-by-HBuilder/image6.png)
+    ![img6](../../static/img/Operation-and-Maintenance/Uploaded-to-Cloud-by-HBuilder/image6.png)
 
 5. 起个名字后点击创建
 
    要分别创建**addFiles**和**getFiles**两个云函数
 
-   ![img7](../../static/img/Operation-and-Maintenance/uploaded-to-cloud-by-HBuilder/image7.png)
+    ![img7](../../static/img/Operation-and-Maintenance/Uploaded-to-Cloud-by-HBuilder/image7.png)
 
 6. 在**addFiles.index.js**里写函数：
 
@@ -82,15 +82,15 @@
    
    ````
 
-   ![img8](../../static/img/Operation-and-Maintenance/uploaded-to-cloud-by-HBuilder/image8.png)
+    ![img8](../../static/img/Operation-and-Maintenance/Uploaded-to-Cloud-by-HBuilder/image8.png)
 
 8. 分别上传部署两个云函数
 
-   ![img9](../../static/img/Operation-and-Maintenance/uploaded-to-cloud-by-HBuilder/image9.png)
+    ![img9](../../static/img/Operation-and-Maintenance/Uploaded-to-Cloud-by-HBuilder/image9.png)
 
 9. 而后可以在web控制台内看到上传的云函数
 
-   ![img10](../../static/img/Operation-and-Maintenance/uploaded-to-cloud-by-HBuilder/image10.png)
+    ![img10](../../static/img/Operation-and-Maintenance/Uploaded-to-Cloud-by-HBuilder/image10.png)
 
    
 
@@ -376,13 +376,13 @@
 >
 > 在我们这里当然都一样啦，选哪个都行
 
-![img11](../../static/img/Operation-and-Maintenance/uploaded-to-cloud-by-HBuilder/image11.png)
+![img11](../../static/img/Operation-and-Maintenance/Uploaded-to-Cloud-by-HBuilder/image11.png)
 
-![img12](../../static/img/Operation-and-Maintenance/uploaded-to-cloud-by-HBuilder/image12.png)
+![img12](../../static/img/Operation-and-Maintenance/Uploaded-to-Cloud-by-HBuilder/image12.png)
 
 > 只有图片可以预览，其它文件都显示空白
 >
 > 仅用于说明可以从云端拿回上传的文件
 
-![img13](../../static/img/Operation-and-Maintenance/uploaded-to-cloud-by-HBuilder/image13.png)
+![img13](../../static/img/Operation-and-Maintenance/Uploaded-to-Cloud-by-HBuilder/image13.png)
 

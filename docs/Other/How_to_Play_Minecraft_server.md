@@ -46,12 +46,13 @@
 
 - 另一个是基于非官方启动器的整合包下载界面：（我这里以PCL II为例）
 
-![img1](../../static/img/Other/How_to_play_Minecraft/img1.png)
+![img1](../../static/img/Other/How_to_Play_Minecraft/img1.png)
 
-![img2](../../static/img/Other/How_to_play_Minecraft/img2.png)
+![img2](../../static/img/Other/How_to_Play_Minecraft/img2.png)
 
 - 还有一个是基于社团存储服务器下载：（需要在校园网环境下操作）
   
+  > 社团存储服务器已经重置，等待后续服务器搭载新的OpenList存储服务器
   [社团Alist存储服务器](http://172.19.15.13:5244/d/root/Resource/JavaSIG/Better%20MC%20%5BFORGE%5D%20BMC4%20v34%20HF.zip?sign=EcFL0BsYArvXz1DWhqusq84e7Q0vgsoJggZqfMgMCKA=:0)
 
 更推荐使用非官方启动器自带的下载界面下载，因为会自动帮你处理，处理完毕之后点击开始游戏即可
@@ -70,10 +71,10 @@
 
 1. 在启动界面，点击左下角的版本选择
 
-![img3](../../static/img/Other/How_to_play_Minecraft/img3.png)
+![img3](../../static/img/Other/How_to_Play_Minecraft/img3.png)
 
-2. 点击`导入整合包`，在弹出的选择界面里找到下载文件的目录，点击确定
-3. 等待启动器处理下载完毕后即可
+1. 点击`导入整合包`，在弹出的选择界面里找到下载文件的目录，点击确定
+2. 等待启动器处理下载完毕后即可
 
 ### 加入服务器
 
@@ -81,15 +82,17 @@
 
 确认完毕之后点击启动游戏，等待进入游戏界面，如下图
 
-![img4](../../static/img/Other/How_to_play_Minecraft/img4.png)
+![img4](../../static/img/Other/How_to_Play_Minecraft/img4.png)
+
+> 游戏搭载服务器已重置，等待后续服务器重新搭建
 
 进入游戏之后，点击`多人游戏`，在下方选择栏内，点击`添加服务器`，在新的界面中输入**172.19.15.13:25565**，所有标点一定要是英文字符，否则会报错而无法进入游戏
 
 也可以点击`直接连接`，同样输入172.19.15.13:25565来进入游戏，只不过不会保存服务器，需要每次都点击和输入
 
-![img5](../../static/img/Other/How_to_play_Minecraft/img5.png)
+![img5](../../static/img/Other/How_to_Play_Minecraft/img5.png)
 
-![img6](../../static/img/Other/How_to_play_Minecraft/img6.png)
+![img6](../../static/img/Other/How_to_Play_Minecraft/img6.png)
 
 等待游戏加载完毕后就可以游玩啦~
 

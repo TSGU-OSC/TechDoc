@@ -9,7 +9,7 @@ apt install zsh
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 看到以下标志即表明安装成功
-![alt text](../../static/img/Other/oh_my_zsh/image.png)
+![image](../../static/img/Other/Oh_My_ZSH/image.png)
 
 换一个主题
 ```
