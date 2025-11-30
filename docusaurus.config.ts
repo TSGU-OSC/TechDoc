@@ -259,11 +259,19 @@ const config: Config = {
             {
               label: '社团官网',
               href: 'https://osc.tsguas.cn',
+            },
+            {
+              label: '网站所属：天津中德应用技术大学 - 开源鸿蒙社',
+              href: 'https://github.com/TSGU-OSC',
+            },
+            {
+              label: '著作者：CapableCCat',
+              href: 'https://github.com/CapableCCat'
             }
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} TSGU-OSC Club. Built with Docusaurus. Made By CapableCCat`,
     },
     prism: {
       theme: prismThemes.github,
