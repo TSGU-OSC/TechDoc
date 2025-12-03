@@ -41,7 +41,7 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  // 在这里设置站点的生产url。
+  // 在这里设置站点的生产url，已在自有服务器、Cloudflare、Vercel进行部署
   url: getBaseUrl(),
 
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -85,6 +85,31 @@ const config: Config = {
     locales: ['zh-Hans'],
   },
 
+  plugins: [
+    [
+      // 插件GitHub主页：
+      // https://github.com/easyops-cn/docusaurus-search-local?tab=readme-ov-file
+      '@easyops-cn/docusaurus-search-local',
+      {
+        // 设置插件语言为中文
+        language: ["en", "zh"],
+        // 对搜索文件名进行哈希处理，利于缓存
+        hashed: true,
+        // 高亮标签
+        highlightSearchTermsOnTargetPage: true,
+        // 启用开发模式索引
+        // 启用本地索引
+        forceIgnoreNoIndex: true,
+        docsDir: 'docs',  // 指定文档目录，默认为'docs'
+        docsRouteBasePath: 'docs',  // 文档基础路径为'/docs'
+        // 开发模式索引文档
+        indexDocs: true,
+        // 没有博客，所以设置为false
+        indexBlog: false,
+      },
+    ],
+  ],
+
   presets: [
     [
       'classic',
@@ -100,7 +125,7 @@ const config: Config = {
 
           // // 关闭文档相关检查3
           // remarkPlugins: [], // 清空 remark 插件
-          // rehypePlugins: [], // 清空 rehype 插件
+          // rehypePlugins: [], // 清空 rehype 插件  
         },
         blog: {
           showReadingTime: true,
@@ -139,20 +164,33 @@ const config: Config = {
     colorMode: {
       respectPrefersColorScheme: true,
     },
+
+    docs: {
+      sidebar: {
+        // 控制整个文档侧边栏是否默认折叠
+        // 允许完全隐藏侧边栏
+        hideable: true,
+        // 控制侧边栏是否可以折叠，以及默认的折叠状态
+        // 自动折叠其他分类
+        autoCollapseCategories: true
+      },
+    },
+
     navbar: {
       title: '技术文档',
       logo: {
         alt: 'TSGU-OSC Logo',
         src: 'img/logo.svg',
       },
+      
       items: [
-        // 搜索框
-        {
-          type: 'search',
-          position: 'right', 
-        },
+        // // 搜索框
+        // {
+        //   type: 'search',
+        //   position: 'right', 
+        // },
 
-        // 导航栏GitHub图标按钮     
+        // 导航栏GitHub图标按钮
         {
           href: 'https://github.com/TSGU-OSC/Tech-Docusaurus',
           position: 'right',
@@ -219,10 +257,6 @@ const config: Config = {
         // 博客
         // {to: '/blog', label: 'Blog', position: 'left'},
       ],
-    },
-    sidebar: {
-      // 收起侧边栏按钮
-      hideable: true,
     },
     footer: {
       style: 'dark',
