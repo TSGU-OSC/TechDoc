@@ -379,6 +379,115 @@ sudo -s
 exit
 ```
 
+### 文件权限管理
+
+#### chown - 修改文件所有者
+
+修改单个文件的所有者
+
+```
+sudo chown <username> <file>
+```
+
+修改文件的所有者和组
+
+```
+sudo chown <username>:<groupname> <file>
+```
+
+递归修改目录及其所有内容的所有者（-R 参数）
+
+```
+sudo chown -R <username>:<groupname> <directory>
+```
+
+将当前目录及所有子目录/文件的所有者改为当前用户
+
+```
+sudo chown -R "$USER:$USER" .
+```
+
+* `$USER` 是环境变量，代表当前登录的用户名
+* `-R` 递归处理所有子目录和文件
+* `.` 表示当前目录
+
+#### chmod - 修改文件权限
+
+Linux文件权限说明：
+* `r` (read) = 4：读权限
+* `w` (write) = 2：写权限
+* `x` (execute) = 1：执行权限
+
+权限分为三组：所有者(owner)、组(group)、其他用户(others)
+
+常用权限数字：
+* `755` = rwxr-xr-x（所有者可读写执行，组和其他用户可读执行）
+* `644` = rw-r--r--（所有者可读写，组和其他用户只读）
+* `777` = rwxrwxrwx（所有人可读写执行，不推荐）
+
+修改单个文件权限
+
+```
+chmod 755 <file>
+```
+
+递归修改目录及其所有内容的权限
+
+```
+chmod -R 755 <directory>
+```
+
+将当前目录及所有子目录/文件权限设为755
+
+```
+sudo chmod -R 755 .
+```
+
+只给所有者添加执行权限
+
+```
+chmod u+x <file>
+```
+
+给所有人添加读权限
+
+```
+chmod a+r <file>
+```
+
+移除组用户的写权限
+
+```
+chmod g-w <file>
+```
+
+#### 常见使用场景
+
+修复项目文件权限问题（常用于克隆仓库后）
+
+```bash
+# 将所有文件所有者改为当前用户
+sudo chown -R "$USER:$USER" .
+
+# 设置合适的权限：目录755，文件644
+sudo find . -type d -exec chmod 755 {} \;
+sudo find . -type f -exec chmod 644 {} \;
+
+# 给脚本添加执行权限
+chmod +x *.sh
+```
+
+修复Web服务器文件权限
+
+```bash
+# 将文件所有者改为web服务器用户（如nginx或www-data）
+sudo chown -R www-data:www-data /var/www/html
+
+# 设置目录755，文件644
+sudo find /var/www/html -type d -exec chmod 755 {} \;
+sudo find /var/www/html -type f -exec chmod 644 {} \;
+```
+
 ## 查看硬件信息
 
 查看cpu信息
