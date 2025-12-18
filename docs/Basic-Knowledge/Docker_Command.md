@@ -52,7 +52,7 @@ docker commit <container_name> <new_image_name>
 * `<container_name>` 替换为实际的容器名称或ID
 * `<new_image_name>` 替换为新镜像的命名
 
-### 通过Dockerfile下载镜像
+### 通过Dockerfile构建镜像
 
 在Dockerfile文件所在目录下执行以下命令
 
@@ -62,6 +62,56 @@ docker build -t <new_image_name> .
 
 * `<new_image_name>` 替换为新镜像的命名
 
+### 标记镜像
+
+为镜像添加新的标签
+
+```
+docker tag <source_image>:<tag> <target_image>:<tag>
+```
+
+示例：为本地镜像添加远程仓库标签
+
+```
+docker tag myapp:latest username/myapp:latest
+docker tag myapp:latest username/myapp:v1.0.0
+```
+
+### Docker登录
+
+登录到Docker Hub或其他镜像仓库
+
+```
+docker login -u <username>
+```
+
+使用密码从标准输入登录（更安全，适用于CI/CD）
+
+```
+echo "<password>" | docker login -u <username> --password-stdin
+```
+
+登录到指定的镜像仓库
+
+```
+docker login <registry_url> -u <username>
+```
+
+### 推送镜像
+
+推送镜像到Docker Hub或其他镜像仓库
+
+```
+docker push <username>/<image_name>:<tag>
+```
+
+推送多个标签
+
+```
+docker push <username>/<image_name>:latest
+docker push <username>/<image_name>:v1.0.0
+```
+
 
 
 ### 操作容器
@@ -70,6 +120,43 @@ docker build -t <new_image_name> .
 
 ```
 docker run -d --name <container_name> <image_name>
+```
+
+使用卷挂载运行容器
+
+挂载主机目录到容器（-v 或 --volume）
+
+```
+docker run -d -p 8080:80 -v /host/path:/container/path --name <container_name> <image_name>
+```
+
+挂载当前目录
+
+```
+docker run -d -v $(pwd):/app --name <container_name> <image_name>
+```
+
+只读挂载
+
+```
+docker run -d -v /host/path:/container/path:ro --name <container_name> <image_name>
+```
+
+使用命名卷（推荐用于持久化数据）
+
+```
+docker volume create mydata
+docker run -d -v mydata:/app/data --name <container_name> <image_name>
+```
+
+多个卷挂载
+
+```
+docker run -d \
+  -v /host/config:/app/config \
+  -v /host/data:/app/data \
+  -v /host/logs:/app/logs \
+  --name <container_name> <image_name>
 ```
 
 运行容器
@@ -86,7 +173,7 @@ docker exec -it <container_name> sh
 
 停止容器
 
-```  
+```
 docker stop <container_name>
 ```
 
@@ -99,7 +186,7 @@ docker rm <container_name>
 查看运行的容器
 
 ```
-docekr ps
+docker ps
 ```
 
 查看所有容器
@@ -118,4 +205,31 @@ docker save -o ubuntu.tar ubuntu
 
 ```
 docker load -i ubuntu.tar
+```
+
+### 完整的CI/CD示例
+
+构建、标记、推送镜像的完整流程
+
+```bash
+# 1. 构建镜像
+docker build -t myapp:latest .
+
+# 2. 标记镜像
+docker tag myapp:latest username/myapp:latest
+docker tag myapp:latest username/myapp:v1.0.0
+
+# 3. 登录Docker Hub
+echo "$DOCKER_PASSWORD" | docker login -u username --password-stdin
+
+# 4. 推送镜像
+docker push username/myapp:latest
+docker push username/myapp:v1.0.0
+
+# 5. 运行容器（带卷挂载）
+docker run -d \
+  -p 3000:3000 \
+  -v $(pwd)/data:/app/data \
+  --name myapp-container \
+  username/myapp:latest
 ```
