@@ -121,24 +121,23 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           // 删除下方链接以用于移除“编辑此页”链接。
           editUrl:
-            'https://github.com/TSGU-OSC/Tech-Docusaurus/tree/master/docs',
-
+            'https://github.com/TSGU-OSC/TechDoc/tree/master',
           // // 关闭文档相关检查3
           // remarkPlugins: [], // 清空 remark 插件
           // rehypePlugins: [], // 清空 rehype 插件  
         },
         blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
+          // showReadingTime: true,
+          // feedOptions: {
+          //   type: ['rss', 'atom'],
+          //   xslt: true,
+          // },
           // Please change this to your repo.
           // 请将此处修改为您的仓库。
           // Remove this to remove the "edit this page" links.
           // 删除下方链接以用于移除“编辑此页”链接。
-          editUrl:
-            'https://github.com/TSGU-OSC/Tech-Docusaurus/tree/master/docs',
+          // editUrl:
+          //   'https://github.com/TSGU-OSC/TechDoc/tree/master',
           // Useful options to enforce blogging best practices
           // 有助于强制执行博客最佳实践的有用选项
           
@@ -192,7 +191,7 @@ const config: Config = {
 
         // 导航栏GitHub图标按钮
         {
-          href: 'https://github.com/TSGU-OSC/Tech-Docusaurus',
+          href: 'https://github.com/TSGU-OSC/TechDoc',
           position: 'right',
           className: 'header-github-link',
           'aria-label': 'GitHub repository',
