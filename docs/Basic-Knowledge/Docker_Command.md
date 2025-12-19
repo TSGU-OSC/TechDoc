@@ -1,5 +1,23 @@
 # Docker常用命令
 
+### 设置镜像加速
+
+```shell
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json << 'EOF'
+{
+  "registry-mirrors": [
+    "https://hub-mirror.c.163.com",
+    "https://docker.mirrors.ustc.edu.cn",
+    "https://docker.1ms.run"
+  ]
+}
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
 ### 从 Docker 镜像仓库获取镜像
 
 ```
