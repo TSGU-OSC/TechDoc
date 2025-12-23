@@ -380,6 +380,23 @@ git shortlog
   git log -- README.md
   ```
 
+- `--follow`：跟踪文件的重命名历史，显示文件在重命名前后的所有提交。
+
+  ```
+  git log --follow <file>
+  ```
+
+  ```
+  # 查看文件的完整历史，包括重命名
+  git log --follow --oneline src/main.cpp
+
+  # 查看文件的详细变更历史
+  git log --follow -p config.json
+
+  # 查看文件的统计信息
+  git log --follow --stat utils.py
+  ```
+
 **3. 显示差异**
 
 - `-p` 或 `--patch`：显示每个提交的详细差异。
@@ -778,6 +795,18 @@ git show <commit-hash>
   ```
   git rebase -i HEAD~3
   ```
+
+- 从根提交开始交互式变基（编辑整个提交历史）：
+
+  ```
+  git rebase -i --root
+  ```
+
+  **使用场景**：
+  - 需要修改第一个提交（root commit）时
+  - 想要重新组织整个仓库的提交历史
+  - 清理项目初始阶段的混乱提交记录
+  - 合并或删除早期的提交
 
 ##### 3. 解决冲突
 
