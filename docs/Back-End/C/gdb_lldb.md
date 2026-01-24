@@ -191,8 +191,13 @@ info proc mappings
 (gdb) info watchpoints
 ```
 ### 查看周围内存
+4字节为一组 按照CPU端序读取
 ```
-(gdb) x/20x 0x7fffbcc51b70
+(gdb/lldb) x/20x 0x7fffbcc51b70
+```
+1字节一组 读取raw bytes(按照在内存中的排列顺序而不是CPU端序)
+```
+(gdb/lldb) x/20xb 0x7fffbcc51b70
 ```
 ### 查看当前指令
 ```
