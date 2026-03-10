@@ -202,6 +202,11 @@ git commit --amend
 git commit --amend --author="Jack Lau <xxxx@gmail.com>"
 ```
 
+更新commit日期为当前时间
+```
+GIT_COMMITTER_DATE="$(date)" git commit --amend --no-edit --date "$(date)"
+```
+
 ### 提交到目标仓库
 
 ```
@@ -746,6 +751,13 @@ git checkout <branch-name>
 ```
 
 
+### 切换到指定tag
+
+```
+git checkout <tag-name>
+```
+
+
 ### 获取本地分支最新哈希值
 
 ```
@@ -832,6 +844,44 @@ git show <commit-hash>
   - `git rebase`：生成线性的提交历史，适合整理本地分支。
   - `git merge`：保留分支的合并历史，适合团队协作。
 
+
+### 暂存工作区更改
+
+#### 作用
+
+`git stash` 用于临时保存工作区的未提交更改，使工作区恢复到干净状态。这在需要切换分支或拉取最新代码时非常有用。
+
+#### git stash push
+
+将当前工作区的更改暂存起来。
+
+```
+git stash push
+```
+
+或简写为：
+
+```
+git stash
+```
+
+可以添加描述信息：
+
+```
+git stash push -m "description"
+```
+
+#### git stash pop
+
+恢复最近暂存的更改并从暂存列表中删除。
+
+```
+git stash pop
+```
+
+如果有冲突，需要手动解决后继续。
+
+---
 
 ### 管理远程仓库
 
