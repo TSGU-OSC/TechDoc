@@ -67,3 +67,5 @@
 * [Open Source Guides](https://opensource.guide/)：由 GitHub 提供的一系列开源指南，涵盖了开源项目的各个方面。
 * [How to Contribute to Open Source](https://opensource.guide/how-to-contribute/)：一篇详细介绍如何参与开源项目的指南。
   <!-- * [Open Source for Beginners](https://www.digitalocean.com/community/tutorial_series/open-source-for-beginners)：DigitalOcean 提供的针对开源初学者的系列教程。 -->
+
+* [加速访问 GitHub 和 Git](./Access_GitHub_and_Git.md)

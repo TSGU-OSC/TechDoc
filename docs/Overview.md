@@ -18,8 +18,16 @@ toc_max_heading_level: 3
   - [基础知识](#基础知识)
   - [前端开发](#前端开发)
   - [后端开发](#后端开发)
+    - [C/C++ 开发](#cc-开发)
+    - [FFmpeg 音视频开发](#ffmpeg-音视频开发)
+    - [Java 开发](#java-开发)
   - [AI与机器学习](#ai与机器学习)
+    - [AI 框架与工具](#ai-框架与工具)
+    - [机器学习资源](#机器学习资源)
   - [运维与部署](#运维与部署)
+    - [Linux 运维](#linux-运维)
+    - [Docker 与容器化](#docker-与容器化)
+    - [服务器管理](#服务器管理)
   - [Hacking](#hacking)
   - [量子计算](#量子计算)
   - [其他主题](#其他主题)
@@ -41,6 +49,7 @@ toc_max_heading_level: 3
 - [XCode CLI 激活](./Basic-Knowledge/XCode_Activate_CLI)
 - [网络流量控制](./Basic-Knowledge/Net_Traffic_Control)
 - [原始数据查看](./Basic-Knowledge/Raw_Data_View)
+- [加速访问 GitHub 和 Git](./Basic-Knowledge/Access_GitHub_and_Git)
 
 
 ## 前端开发
